@@ -12,7 +12,9 @@
     "build": "tsc",
     "publish": "npm run build",
     "lint": "eslint src/** --max-warnings 0",
-    "prettier": "prettier --write ."
+    "format": "prettier --write .",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
